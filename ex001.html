@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 001</title>
+    <style>
+       div#values{
+            border-spacing: 15px;
+            display: table;
+            font-size: 25px;
+            padding: 10px;
+            border: 5px solid #3a0be4;
+            border-radius: 10px;
+       }
+       input {
+            margin-top: 10px ;
+            margin-bottom: 10px;
+            display: block;
+       }
+    </style>
+</head>
+    <center>
+        <h1>Desafio 001</h1>
+        <p> Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.</p>
+    <div id="values"> 
+    <label for="">Salario por hora</label>
+    <input type="number" id="salHora">
+    <label for="">Horas trabalhadas</label>
+    <input type="number" id="hora">
+    <input type="button" value="Calcular" onclick="calculo()">
+    <div id="valor"> Resultado</div>
+    </div>
+    </center>   
+    <script>
+        function calculo(){
+            let salHora = document.getElementById('salHora').value
+            let hora = document.getElementById('hora').value
+            var resultado = salHora * hora
+            let valor = document.getElementById('valor')
+            var formato = { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }
+            valor.innerHTML =  resultado.toLocaleString('pt-BR', formato)
+            
+        };
+    </script>
+<body>
+    
+</body>
+</html>
