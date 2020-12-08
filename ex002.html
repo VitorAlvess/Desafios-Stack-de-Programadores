@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 002</title>
+</head>
+<body>
+<center>
+    <h1>Desafio 001</h1>
+    <h2>Estrutura de Repetição</h2>
+    <p>Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.</p>
+    <div id="resultado"></div>
+    <script>
+        var i = 1
+        var notas = 0
+        var resultado = document.getElementById('resultado')
+        while (true){
+            var nota = parseFloat(prompt(`Digite a nota ${i} (999 para sair):`));
+            if ( nota == 999) break;
+
+            while (nota > 10 || nota < 0){
+                nota = parseFloat(prompt(`Digite um valor valido para a nota ${i} `));
+                
+            }   
+            i++
+            notas = notas + nota
+
+
+        }
+        resultado.innerHTML = `<h2>A media das notas é <b>${notas/(i - 1)} </h2> `
+
+    </script>
+</center>
+</body>
+</html>
