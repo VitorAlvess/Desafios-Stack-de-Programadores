@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 003</title>
+    <style>
+        header{
+            width: 500px;
+            margin: auto;
+           
+            
+        }
+
+        div#form{
+            
+            width:200px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: orange;
+            
+        }
+        
+        input,select, p{
+           
+            margin-top: 10px;
+            display: block;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desafio 003</h1>
+        <p>Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja    realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+        par ou ímpar;
+        positivo ou negativo;
+        inteiro ou decimal.</p>
+    </header>
+
+    <div id="form">
+        <p>Valor 1</p>
+        <input type="number" id="valor1">
+        <p>Valor 2</p>
+        <input type="number" id="valor2">
+        <select name="select" id="select">
+            <option value="soma">Adição</option> 
+            <option value="menos">Subtração</option>
+            <option value="multipli">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+
+          </select>
+        <input type="button" value="Calcular" onclick="calcular()">
+
+
+        <div id="resultado"></div>
+    </div>
+
+
+    <script>
+        function calcular() {
+            let valor1 = parseFloat(document.getElementById('valor1').value)
+            let valor2 = parseFloat(document.getElementById('valor2').value)
+            let select = document.getElementById('select').value
+            let resultado = document.getElementById('resultado')
+            
+            
+            var valor = 0
+            if (select == 'soma') {
+                valor = valor1 + valor2
+                resultado.innerHTML = `O resultado é ${valor}`;
+                
+            }
+            if (select == 'menos') {
+                valor = valor1 - valor2
+                resultado.innerHTML = `O resultado é ${valor}`;
+                
+            }
+            if (select == 'multipli') {
+                valor = valor1 * valor2
+                resultado.innerHTML = `O resultado é ${valor}`;
+                
+            }
+            if (select == 'divisao') {
+                valor = valor1 / valor2
+                resultado.innerHTML = `O resultado é ${valor}`;
+                
+            }
+            if (valor % 2 == 0) {
+                resultado.innerHTML += ` <p> Par</p>`
+                
+            } else{
+                resultado.innerHTML += ` <p> Impar</p>`
+            }
+            
+            if (valor < 0) {
+                resultado.innerHTML += ` <p> Resultado Negativo</p>`
+                
+            }
+            if (Number.isInteger(valor) == true) {
+                resultado.innerHTML += ` <p> Numero inteiro</p>`
+            }
+
+            if (Number.isInteger(valor) == false) {
+                resultado.innerHTML += ` <p> Numero Decimal</p>`
+
+                
+            }
+
+
+        }
+    </script>
+
+    
+</body>
+</html>
