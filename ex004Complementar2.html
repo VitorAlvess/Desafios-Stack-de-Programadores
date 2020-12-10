@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+</head>
+<body>
+    <script>
+        // Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada.
+        var n = parseInt(prompt('Digite a quantidade de pessoas'))
+        var idades = 0
+        for (let index = 1; index <= n; index++) {
+            var pessoa = parseInt(prompt(`Digite a idade da pessoa ${index}`))
+            idades = idades + pessoa
+
+
+            
+        }
+        media = idades / n
+        
+        if (media < 26) {
+            alert('A turma é jovem')
+            
+        } else if (media < 60){
+            alert('A turma é Adulta')
+        } else{
+            alert('A turma é idosa')
+        }
+    </script>
+</body>
+</html>

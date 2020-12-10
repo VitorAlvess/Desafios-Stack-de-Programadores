@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+</head>
+<body>
+<div id="resultado"></div>
+    <script>
+        // Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário. O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos. Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
+
+        var n = parseInt(prompt('Digite o limite'))
+        var resultado = document.getElementById('resultado')
+
+
+        for (let index = 0; index <= n; index++) {
+            if (index % 2 != 0) {
+                resultado.innerHTML +=  `  ${index} <br>`
+                
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
