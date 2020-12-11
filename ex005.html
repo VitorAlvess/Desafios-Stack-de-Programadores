@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        header{
+           
+           text-align: center;
+        }
+        section {
+            background: rgb(245, 245, 171);
+            width: 500px;
+            border-radius: 20px;
+            padding: 25px;
+            margin: auto;
+            
+        }
+        #resultado{
+            margin-top: 50px;
+        }
+        div{ 
+            
+           margin: auto;
+
+        }
+       #botoes{
+           font-size: 30px;
+           font-family: 'Helvetica Neue';
+       }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ex 005</h1>
+        <p>Crie uma classe que modele uma bola:
+
+            Atributos:Cor, circunferência, material
+            Métodos:trocaCor e mostraCor</p>
+            <p>Cor em Ingles</p>
+    </header>
+
+    <section>
+    <div id="content">
+        <label for="color">Cor</label>
+        <input type="text" id="color">
+        <label for="color">Circunferência</label>
+        <input type="text" id="circ">
+        <center>
+        <div id='botoes'>
+        <input type="button" onclick="calculo()" value="Calcular">
+        <input type="button" onclick="trocarCor()" value="TrocarCor">
+        </div>
+        </center>
+       
+
+    </div>
+    
+</section>
+<div id="resultado"></div>
+
+    <script>
+
+        function calculo(){
+
+            let color = document.getElementById("color").value
+            let circ = parseFloat(document.getElementById("circ").value)
+            let resultado = document.getElementById("resultado")
+
+            let diametro = circ / 3.14
+
+            
+            resultado.style.width = diametro + "px"
+            resultado.style.height = diametro + "px"
+            resultado.style.borderRadius = diametro + "px"
+            resultado.style.background = color
+        }
+        function trocarCor(){
+            let color = document.getElementById("color").value
+            let resultado = document.getElementById("resultado")
+            resultado.style.background = color
+
+        }
+    </script>
+
+</body>
+</html>
