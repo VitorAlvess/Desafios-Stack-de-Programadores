@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Dado</h1>
+    <script>
+        var faces = []
+        var numeroDeLados = parseInt(prompt("Qual é o numero de lados?"));
+        for (let index = 1; index <= numeroDeLados; index++) {
+            faces.push(index);
+            
+        }
+        var random = Math.floor(Math.random() * faces.length)
+        alert(faces[random])
+        
+    </script>
+    </center>
+
+</body>
+</html>
