@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        var numeros = [1, 2, 3, 4, 5, 6]
+        var opcCerta = Math.floor(Math.random() * 6)
+        var usuario = prompt(`Escolha uma dessas alternativas ${numeros}`)
+        console.log(opcCerta)
+        if (opcCerta == usuario) {
+            alert('Você acertou, Parabéns!')
+            
+        } else {
+            alert(`Você errou, A resposta certa era ${opcCerta}`)
+        }
+    </script>
+    
+</body>
+</html>
